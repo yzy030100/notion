@@ -1,40 +1,45 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Closure</title>
-</head>
-<style>
-	element.style {
-	    background-color: rgb(255, 255, 255);
-	    color: rgb(0, 0, 0);
-	}					
-	html, body {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color:rgb(255, 255, 255);
-	}
-	img{
-		height: auto;  
-		max-width: 100%;  
-		max-height: 100%; 
-		float: left;
-	}
-</style>
-<body>
- <div style="width: 100%;">
-	<img style="width: 30%;" src="lu.png">
-	<div style="float: left;width:70%;margin-top: 10%;" >
-		<span style="font-size: 8vw;">戴尔微型计算机</span>
-	</div>
- </div>
-
-  <script>
-
-  </script>
-</body>
-
-</html>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Closure</title>
+  </head>
+  <style>
+	  element.style {
+		  background-color: rgb(255, 255, 255);
+		  color: rgb(0, 0, 0);
+	  }					
+	  html, body {
+		  width: 100%;
+		  height: 100%;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  background-color:rgb(255, 255, 255);
+	  }
+	  img{
+		  height: auto;  
+		  max-width: 100%;  
+		  max-height: 100%; 
+		  float: left;
+	  }
+  </style>
+  <body>
+   <div style="width: 100%;">
+	  <img style="width: 30%;" src="lu.png">
+	  <div style="float: left;width:70%;margin-top: 10%;" >
+		  <span style="font-size: 8vw;color: #93b5cf;">今日宜:</span>
+		  <span id="random" style="font-size: 8vw;color:rgb(98, 100, 156)"></span>
+	  </div>
+   </div>
+  
+	<script>
+		var random_array=new Array("逛街","看书","吃凉皮","和我聊天","喝奶茶","睡懒觉","看剧","和我聊天","和我聊天","出去玩","吃火锅","玩游戏","看电影");
+		var day=new Date().getDay();
+		console.log(day);
+		console.log(random_array[day]);
+		document.getElementById('random').innerHTML=random_array[day];
+	</script>
+  </body>
+  
+  </html>
